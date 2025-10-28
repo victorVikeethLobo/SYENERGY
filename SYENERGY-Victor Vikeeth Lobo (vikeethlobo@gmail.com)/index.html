@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SYENERGY 2025 - Alliance University Fest</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;500&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #2e1b0f, #0d0502);
+    color: #f5f1ea;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(30,15,5,0.95);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid #b8972a;
+  }
+
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #d4af37;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  nav a {
+    color: #f5f1ea;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  nav a:hover { color: #d4af37; }
+
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 80px;
+    background: linear-gradient(to bottom, rgba(45,25,15,0.85), rgba(0,0,0,0.9)),
+      url('https://images.unsplash.com/photo-1535378917041-10a22c95931a?auto=format&fit=crop&w=1600&q=80')
+      no-repeat center center/cover;
+  }
+
+  .hero-text {
+    max-width: 520px;
+  }
+
+  .hero h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #d4af37;
+  }
+
+  .hero p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #e3d9c2;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: #d4af37;
+    color: #1a1005;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn:hover { background: #b8972a; transform: scale(1.05); }
+
+  .character {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #d4af37;
+    background: radial-gradient(circle at 30% 30%, #3a210f, #0b0402);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .eye {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #f5f1ea;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: inset 0 0 10px #7f5f3a;
+  }
+
+  .eye.left { left: 60px; }
+  .eye.right { right: 60px; }
+
+  .pupil {
+    width: 28px;
+    height: 28px;
+    background: #d4af37;
+    border-radius: 50%;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: 0.05s;
+  }
+
+  section {
+    padding: 100px 80px;
+  }
+
+  section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+  }
+
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+  }
+
+  .event-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(212,175,55,0.25);
+    transition: 0.4s;
+  }
+
+  .event-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 35px rgba(212,175,55,0.4);
+  }
+
+  .event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .event-card .info {
+    padding: 20px;
+    background: #1a0f07;
+  }
+
+  .event-card h3 {
+    color: #d4af37;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .event-card p {
+    color: #e3d9c2;
+    line-height: 1.5;
+  }
+
+  .price {
+    color: #b8972a;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px;
+    background: #0b0402;
+    color: #aaa;
+    border-top: 1px solid #2a1a0b;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>SYENERGY 2025</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#register">Register</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to SYENERGY 2025</h2>
+      <p>The grand fest of <b>Alliance University</b> where innovation meets creativity. Join the most awaited celebration of ideas and spirit!</p>
+      <a href="#events" class="btn">Explore Events</a>
+    </div>
+    <div class="character" id="char">
+      <div class="eye left"><div class="pupil" id="pupilLeft"></div></div>
+      <div class="eye right"><div class="pupil" id="pupilRight"></div></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About The Fest</h2>
+    <p style="max-width:800px; margin:auto; color:#e3d9c2; line-height:1.8; text-align:center;">
+      <b>SYENERGY 2025</b> is Alliance University’s annual event celebrating student innovation, creativity, and teamwork. Explore coding competitions, cultural nights, and much more!
+    </p>
+  </section>
+
+  <section id="events">
+    <h2>Featured Events</h2>
+    <div class="events">
+      <div class="event-card">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" alt="Coding Marathon">
+        <div class="info">
+          <h3>CodeSprint</h3>
+          <p>Compete with the best in a high-speed coding marathon for glory and prizes.</p>
+          <p class="price">₹199 / Team</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Robotics Event">
+        <div class="info">
+          <h3>RoboWars</h3>
+          <p>Build and battle your bots in this electrifying robotics arena!</p>
+          <p class="price">₹299 / Team</p>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80" alt="Gaming Arena">
+        <div class="info">
+          <h3>Gamer’s Den</h3>
+          <p>Show your gaming prowess in our ultimate Esports face-off!</p>
+          <p class="price">₹149 / Player</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="register" style="text-align:center;">
+    <h2>Register Now</h2>
+    <p style="margin-bottom:30px;">Be part of Alliance University’s grand fest of innovation and joy.</p>
+    <a href="#" class="btn">Register Here</a>
+  </section>
+
+  <footer>
+    © 2025 SYENERGY | Alliance University | Designed by Student Coders
+  </footer>
+
+  <script>
+    const pupilLeft  = document.getElementById('pupilLeft');
+    const pupilRight = document.getElementById('pupilRight');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 40;
+      const y = (e.clientY / window.innerHeight - 0.5) * 40;
+      pupilLeft.style.transform  = `translate(${x}px, ${y}px)`;
+      pupilRight.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+</body>
+</html>
